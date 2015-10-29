@@ -1,0 +1,33 @@
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\bin\Debug\bll.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\bin\Debug\bll.pdb
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\bin\Debug\DAL.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\obj\Debug\bll.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\obj\Debug\bll.pdb
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\bin\Debug\bll.XML
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\Pizza\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\bin\Debug\bll.XML
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\bin\Debug\bll.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\bin\Debug\bll.pdb
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\bin\Debug\DAL.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\obj\Debug\bll.dll
+C:\Users\heigert\Documents\Visual Studio 2015\Projects\PizzaOhneTFS\bll\obj\Debug\bll.pdb
+Z:\Pizza.Basis\bll\bin\Debug\bll.XML
+Z:\Pizza.Basis\bll\bin\Debug\bll.dll
+Z:\Pizza.Basis\bll\bin\Debug\bll.pdb
+Z:\Pizza.Basis\bll\bin\Debug\DAL.dll
+Z:\Pizza.Basis\bll\obj\Debug\bll.dll
+Z:\Pizza.Basis\bll\obj\Debug\bll.pdb
+Y:\Pizza.Basis\bll\bin\Debug\bll.XML
+Y:\Pizza.Basis\bll\bin\Debug\bll.dll
+Y:\Pizza.Basis\bll\bin\Debug\bll.pdb
+Y:\Pizza.Basis\bll\bin\Debug\DAL.dll
+Y:\Pizza.Basis\bll\obj\Debug\bll.dll
+Y:\Pizza.Basis\bll\obj\Debug\bll.pdb
+Z:\mssf\bll\bin\Debug\bll.XML
+Z:\mssf\bll\bin\Debug\bll.dll
+Z:\mssf\bll\bin\Debug\bll.pdb
+Z:\mssf\bll\bin\Debug\DAL.dll
+Z:\mssf\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
+Z:\mssf\bll\obj\Debug\bll.dll
+Z:\mssf\bll\obj\Debug\bll.pdb

@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>bll</name>
+    </assembly>
+    <members>
+        <member name="T:bll.clsBLLCollections">
+            <summary>
+            Abstrakte Oberklasse für die Collection-Klassen
+            enthält einige viel verwendete Mewthoden
+            </summary>
+        </member>
+        <member name="M:bll.clsBLLCollections.AddStringFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            AddStringFieldValue(): String aus DataRow-Field, mit Handling von DBNull
+            </summary>
+            <param name="row">DataRow</param>
+            <param name="fieldName">feldname in DataRow</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:bll.clsBLLCollections.AddIntFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            AddIntFieldValue(): Int aus DataRow-Field auslesen, mit Handling von DBNull
+            </summary>
+            <param name="row">DataRow</param>
+            <param name="fieldName">feldname</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:bll.clsBLLCollections.AddDoubleFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            AddDoubleFieldValue(): Double aus DataRow-Field, mit Handling von DBNull
+            </summary>
+            <param name="row">DataRow</param>
+            <param name="fieldName">feldname</param>
+            <returns>double</returns>
+        </member>
+        <member name="M:bll.clsBLLCollections.AddBoolFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            AddBoolFieldValue(): Bool aus DataRow-Field, mit Handling von DBNull
+            </summary>
+            <param name="row">DataRow</param>
+            <param name="fieldName">feldname</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:bll.clsBLLCollections.AddDateTimeFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            AddDateTimeFieldValue(): DateTime aus DataRow-Field, mit Handling von DBNull
+            </summary>
+            <param name="row">DataRow</param>
+            <param name="fieldName">feldname</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="T:bll.clsOrder">
+            <summary>
+            clsOrder: Bestellung
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.ID">
+            <summary>
+            Id der Order, von DB vergeben, Read-Only, eindeutig
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.ProductId">
+            <summary>
+            Produkt-ID des bestellten Produktes, Fremdschlüssel)
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.UserId">
+            <summary>
+            User-Id der Bestellers, Fremdschlüssel
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderDate">
+            <summary>
+            Zeitpunkt wann bestellt wurde
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderSize">
+            <summary>
+            Größe des bestellten Produkts,  in cm, litern, etc.
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderExtras">
+            <summary>
+            Anzahl der Extras, speziell bei Pizza
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderCount">
+            <summary>
+            Anzahl der bestellten Produkte
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderSum">
+            <summary>
+            Gesamtpreis der Bestellung
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderDelivery">
+            <summary>
+            true falls Bestellung geliefert werden soll, false bei Selbstabholung
+            </summary>
+        </member>
+        <member name="P:bll.clsOrder.OrderStatus">
+            <summary>
+            Status der Bestellung, noch zu definieren, 0: kein Status definiert
+            </summary>
+        </member>
+        <member name="M:bll.clsOrder.#ctor">
+            <summary>
+            Constructor (mit Default-Werten)
+            </summary>
+        </member>
+        <member name="T:bll.clsOrderExtended">
+            <summary>
+            clsOrderExtended(): Erweiterung von clsOrder um Attribute ProductName und UserName
+            diese sind für die Anzeige benutzerfreundlicher als die zugehörigen IDs
+            </summary>
+        </member>
+        <member name="P:bll.clsOrderExtended.ProductName">
+            <summary>
+            Name des bestellten Produktes
+            </summary>
+        </member>
+        <member name="P:bll.clsOrderExtended.UserName">
+            <summary>
+            Name des bestellenden Nutzers
+            </summary>
+        </member>
+        <member name="M:bll.clsOrderExtended.#ctor">
+            <summary>
+            Constructor (mit Default-Werten)
+            ruft zunächst Constructor der Oberklasse (clsOrder) auf und setzt dann die zusätzlichen Attribute
+            </summary>
+        </member>
+        <member name="T:bll.clsOrderCollection">
+            <summary>
+            clsOrderCollection: Verwalten von Order-Objekten und OrderExtended Objekten
+            </summary>
+        </member>
+        <member name="M:bll.clsOrderCollection.#ctor">
+            <summary>
+            Order-Collection Konstruktor 
+            </summary>
+        </member>
+        <member name="M:bll.clsOrderCollection.getAllOrders">
+            <summary>
+            Liest alle Order aus der DB und gibt sie als Liste zurück
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:bll.clsOrderCollection.InsertOrder(bll.clsOrder)">
+            <summary>
+            Insert eines Orderobjekts
+            </summary>
+            <param name="_Order">Order-Objekt</param>
+            <returns>1 falls Insert erfolgreich </returns>
+        </member>
+        <member name="M:bll.clsOrderCollection.DatarowToclsOrderExtended(System.Data.DataRow)">
+            <summary>
+            DatarowToclsOrder(): Transforms a DataRow into a OrderExtended Object
+            </summary>
+            <param name="_dr">DataRow</param>
+            <returns>OrderExtended-Objekt</returns>
+        </member>
+        <member name="T:bll.clsOrderFacade">
+            <summary>
+            clsOrderFacade: nach außen hin sichtbare Methoden bzgl. Order-Verwaltung
+            das meiste wird direkt an clsOrderCollection-Methoden durchgereicht
+            </summary>
+        </member>
+        <member name="M:bll.clsOrderFacade.#ctor">
+            <summary>
+            Konstruktor, instatiiert _orderCol
+            </summary>
+        </member>
+        <member name="M:bll.clsOrderFacade.OrdersGetAll">
+            <summary>
+            Alle Orders lesen
+            </summary>
+            <returns>Liste der Order</returns>
+        </member>
+        <member name="M:bll.clsOrderFacade.OrderInsert(bll.clsOrder)">
+            <summary>
+            OrderInsert
+            </summary>
+            <param name="_newOrder"></param>
+            <returns>true fals insert erfolgreich</returns>
+        </member>
+        <member name="M:bll.clsOrderFacade.CalculateOrderPrice(bll.clsOrder)">
+            <summary>
+            Preisberechnung der Bestellung - noch nicht implementiert
+            </summary>
+            <param name="_newOrder"></param>
+            <returns>berechneter Preis</returns>
+        </member>
+        <member name="M:bll.clsProductCollection.#ctor">
+            <summary>
+            Product-Collection Konstruktor stellt Verbindung zur Datenbank her
+            </summary>
+            
+        </member>
+        <member name="T:bll.clsUser">
+            <summary>
+            clsUser: Klasse für Benutzer von Pizza
+            nur Attribute, keine Methoden
+            </summary>
+        </member>
+        <member name="M:bll.clsUser.#ctor">
+            <summary>
+            Constructor (mit default-Werten)
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.ID">
+            <summary>
+            ID des User, von DB vergeben, eindeutig, readonly
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.Name">
+            <summary>
+            Name des Nutzers
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.Address">
+            <summary>
+            Adresse des Nutzers
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.Distance">
+            <summary>
+            Distanz: Entfernung zum Pizza-Shop
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.Role">
+            <summary>
+            0: Kunde; 1: Manager; 2: Service (z.B. Pizzabäcker)
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.IsActive">
+            <summary>
+            True if Active (User may log in)
+            </summary>
+        </member>
+        <member name="P:bll.clsUser.Password">
+            <summary>
+            Passwort (optional)
+            </summary>
+        </member>
+        <member name="M:bll.clsUser.Insert">
+            <summary>
+            Einfügen dieses Users in die Datenbank
+            </summary>
+            <returns>true if successful</returns>
+        </member>
+        <member name="M:bll.clsUser.Update">
+            <summary>
+            Update des Users
+            </summary>
+            <returns>true if successful</returns>
+        </member>
+        <member name="M:bll.clsUser.Delete">
+            <summary>
+            Lösche den Benutzer
+            </summary>
+            <returns>true if successful</returns>
+        </member>
+        <member name="T:bll.clsUserCollection">
+            <summary>
+            clsUserCollection: Zugriff auf DAL, Abbildung auf clsUser- und List-clsUser-Objekten
+            nur in bll sichtbar
+            </summary>
+        </member>
+        <member name="M:bll.clsUserCollection.#ctor">
+            <summary>
+            User-Collection Konstruktor 
+            stellt Verbindung zur Datenbank her
+            </summary>
+        </member>
+        <member name="M:bll.clsUserCollection.GetAllUsers">
+            <summary>
+            Liest alle User aus der DB und gibt sie als Liste zurück
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:bll.clsUserCollection.UpdateUser(bll.clsUser)">
+            <summary>
+            Update eines Userobjekts
+            </summary>
+            <param name="_User">User-Objekt mit geänderten Attributen</param>
+            <returns>1 falls Update erfolgreich </returns>
+        </member>
+        <member name="M:bll.clsUserCollection.DeleteUser(bll.clsUser)">
+            <summary>
+            Löschen eines Userobjekts
+            </summary>
+            <param name="_User">User-Objekt mit geänderten Attributen</param>
+            <returns>1 falls delete erfolgreich </returns>
+        </member>
+        <member name="M:bll.clsUserCollection.InsertUser(bll.clsUser)">
+            <summary>
+            Insert eines Userobjekts
+            </summary>
+            <param name="_User">User-Objekt</param>
+            <returns>1 falls Insert erfolgreich </returns>
+        </member>
+        <member name="M:bll.clsUserCollection.GetUserById(System.Int32)">
+            <summary>
+            Gibt User mit gegebener ID zurück
+            </summary>
+            <param name="_id">ID des gesuchten Users</param>
+            <returns>User-Objekt (oder NULL) </returns>
+        </member>
+        <member name="M:bll.clsUserCollection.DatarowToClsUser(System.Data.DataRow)">
+            <summary>
+            DatarowToClsUser(): Transforms a DataRow into a User Object
+            </summary>
+            <param name="_dr">DataRow</param>
+            <returns>User-Objekt</returns>
+        </member>
+        <member name="T:bll.clsUserFacade">
+            <summary>
+            clsUserFacade: nach außen hin sichtbare Methoden bzgl. User-Verwaltung
+            das meiste wird direkt an clsUserCollection-Methoden durchgereicht
+            </summary>
+        </member>
+        <member name="M:bll.clsUserFacade.#ctor">
+            <summary>
+            Konstruktor
+            </summary>
+        </member>
+        <member name="M:bll.clsUserFacade.UsersGetAll">
+            <summary>
+            Alle User lesen
+            </summary>
+            <returns>Liste der User</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.UserGetById(System.Int32)">
+            <summary>
+            UserGetById: Read User with given Id
+            </summary>
+            <param name="id">User-Id</param>
+            <returns>User object or null</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.UserInsert(bll.clsUser)">
+            <summary>
+            User Insert
+            </summary>
+            <returns>true, wenn Insert erfogreich</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.UserUpdate(bll.clsUser)">
+            <summary>
+            Update User Object
+            </summary>
+            <param name="updUser">User-Objekt mit upzudatenenden Attributen</param>
+            <returns>true if successful</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.UserDelete(bll.clsUser)">
+            <summary>
+            Delete User Object
+            </summary>
+            <param name="delUser">zu löschendes User-Objekt</param>
+            <returns>true if successful</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.CountUsers">
+            <summary>
+            Zählt Anzahl Users, indem erst alle eingelesen werden und dann Länge der Liste zurückgegeben wird
+            </summary>
+            <returns>Anzahl Users</returns>
+        </member>
+        <member name="M:bll.clsUserFacade.CountActiveUsers">
+            <summary>
+            Zählt Anzahl von aktiven Usern 
+            </summary>
+            <returns>Anzahl Users</returns>
+        </member>
+    </members>
+</doc>
