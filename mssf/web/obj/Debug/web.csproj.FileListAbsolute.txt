@@ -68,3 +68,13 @@ Z:\mssf\web\bin\bll.xml
 Z:\mssf\web\obj\Debug\web.csprojResolveAssemblyReference.cache
 Z:\mssf\web\obj\Debug\web.dll
 Z:\mssf\web\obj\Debug\web.pdb
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\web.dll.config
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\web.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\web.pdb
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\bll.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\DAL.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\bll.pdb
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\bin\bll.xml
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\obj\Debug\web.csprojResolveAssemblyReference.cache
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\obj\Debug\web.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\web\obj\Debug\web.pdb

@@ -72,6 +72,7 @@
     <Content Include="Beispiele\user-zaehlen.aspx" />
     <Content Include="Beispiele\user-read.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="product-read.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="product-read.aspx.cs">
       <DependentUpon>product-read.aspx</DependentUpon>

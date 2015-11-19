@@ -31,3 +31,10 @@ Z:\mssf\bll\bin\Debug\DAL.dll
 Z:\mssf\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
 Z:\mssf\bll\obj\Debug\bll.dll
 Z:\mssf\bll\obj\Debug\bll.pdb
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.XML
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.pdb
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\DAL.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.dll
+E:\3.Semster\SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.pdb
