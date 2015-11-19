@@ -18,7 +18,7 @@
     </p> <a href="product-read.aspx">Products</a>
         <p><a href="LoginPage.aspx">Hier geht es zum Login</a></p>
           <p>Impressum</p>
-        <p><i>Version: 05.11.2015</i></p>
+        <p><i>Version: 19.11.2015</i></p>
     </form>
 </body>
 </html>
