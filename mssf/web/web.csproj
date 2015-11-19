@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Beispiele\default.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="Beispiele\order-insert.aspx" />
     <Content Include="Beispiele\order-read.aspx" />
     <Content Include="Beispiele\Seite1mitMaster.aspx" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Beispiele\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Beispiele\order-insert.aspx.cs">
       <DependentUpon>order-insert.aspx</DependentUpon>

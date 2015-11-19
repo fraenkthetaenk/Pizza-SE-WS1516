@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
     <meta charset = "ISO-8859-1" />
-    <title>Pizza Pizza!</title>
+    <title>Pizzaria MSSF</title>
     </head>
 <body>
     <form id="form1" runat="server">
@@ -15,9 +15,10 @@
         <h1>Willkommen bei MSSF's Pizza!</h1></div>
     <p>
         <a href="Beispiele/default.aspx">Hier</a> gehts weiter zu einigen Beispielprogrammen ...
-    </p> 
-        <a href="product-read.aspx">Products</a>
-        <p><i>Version: 15.10.2015</i></p>
+    </p> <a href="product-read.aspx">Products</a>
+        <p><a href="LoginPage.aspx">Hier geht es zum Login</a></p>
+          <p>Impressum</p>
+        <p><i>Version: 05.11.2015</i></p>
     </form>
 </body>
 </html>
