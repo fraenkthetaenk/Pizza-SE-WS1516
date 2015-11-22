@@ -10,7 +10,7 @@
 namespace web {
     
     
-    public partial class Login {
+    public partial class Unregister {
         
         /// <summary>
         /// form1 control.
@@ -31,13 +31,13 @@ namespace web {
         protected global::System.Web.UI.WebControls.Label lblUsername;
         
         /// <summary>
-        /// inUser control.
+        /// inUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inUser;
+        protected global::System.Web.UI.WebControls.TextBox inUsername;
         
         /// <summary>
         /// lblPassword control.
@@ -67,12 +67,12 @@ namespace web {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// btnLogin control.
+        /// btnUnregister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Button btnUnregister;
     }
 }

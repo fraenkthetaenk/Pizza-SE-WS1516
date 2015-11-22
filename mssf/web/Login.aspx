@@ -17,7 +17,8 @@
         <asp:Label ID="lblPassword" runat="server" Text="Password:" Height="20px" Width="100px"></asp:Label>
         <asp:TextBox ID="inPassword" runat="server" TextMode="Password"></asp:TextBox>
         <p>
-            &nbsp;<asp:Button ID="btnLogin" runat="server" OnClick="Button1_Click" Text="Login" />
+            &nbsp;<asp:Label ID="lblError" runat="server" Text="" Visible="false"></asp:Label></p><p>
+            <asp:Button ID="btnLogin" runat="server" OnClick="Button1_Click" Text="Login" />
         </p>
     </form>
 </body>

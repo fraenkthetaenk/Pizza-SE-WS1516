@@ -17,7 +17,7 @@ namespace bll
         /// 
         internal clsProductCollection()
         {
-            _databaseFile = System.Configuration.ConfigurationManager.AppSettings["AccesFileName"];
+            _databaseFile = System.Configuration.ConfigurationManager.AppSettings["AccessFileName"];
             _myDAL = DAL.DataFactory.GetAccessDBProvider(_databaseFile);
         }
 

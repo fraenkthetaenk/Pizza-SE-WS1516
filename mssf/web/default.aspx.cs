@@ -11,7 +11,20 @@ namespace web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session.Count == 0)
+            {
+
+                lblCurrentuser.Text = "Aktuell ist kein user Angemeldet";
+            }
+            else
+            {
+                bll.clsUser currentUser;
+                currentUser = (bll.clsUser)Session["Current User"];
+                lblCurrentuser.Text = "Aktuell ist "+ currentUser.Name +" angemeldet";
+
+            }
+
+              
         }
     }
 }

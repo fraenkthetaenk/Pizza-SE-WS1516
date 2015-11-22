@@ -16,8 +16,15 @@
     <p>
         <a href="Beispiele/default.aspx">Hier</a> gehts weiter zu einigen Beispielprogrammen ...
     </p> 
+       
         <a href="product-read.aspx">Products</a>
-        <p><i>Version: 15.10.2015</i></p>
+        
+        <p>
+            <a href="Login.aspx"> Login</a>
+            
+            </p>
+        <asp:Label ID="lblCurrentuser" runat="server" Text=""></asp:Label>
+        <p><i>Version: 22.11.2015</i></p>
     </form>
 </body>
 </html>
