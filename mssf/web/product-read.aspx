@@ -5,9 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>Produktanzeige</h1>
+        <p></p>
     <div>
     
     </div>
@@ -23,6 +26,8 @@
             </Columns>
         </asp:GridView>
         <asp:ObjectDataSource ID="odsProducts" runat="server" SelectMethod="ProductsGetAll" TypeName="bll.clsProductFacade" OldValuesParameterFormatString="original_{0}"></asp:ObjectDataSource>
+        <asp:HyperLink ID="linkDefault" runat="server" NavigateUrl="~/default.aspx">Main Page</asp:HyperLink>
+       
     </form>
-</body>
+    </body>
 </html>

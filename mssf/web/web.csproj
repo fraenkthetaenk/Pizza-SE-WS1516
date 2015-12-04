@@ -73,6 +73,8 @@
     <Content Include="Beispiele\user-read.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MyOrders.aspx" />
+    <Content Include="Order.aspx" />
     <Content Include="product-read.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StyleSheet.css" />
@@ -191,6 +193,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="product-read.aspx.cs">
       <DependentUpon>product-read.aspx</DependentUpon>

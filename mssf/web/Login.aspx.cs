@@ -36,27 +36,29 @@ namespace web
                 }
 
             }
-            if (found) { 
-            if (inPassword.Text == List.ElementAt(i).Password)
+            if (found)
             {
+                if (inPassword.Text == List.ElementAt(i).Password)
+                {
                     Session.RemoveAll();
-                    
-                    Session.Add("Current User", List.ElementAt(i));               
+
+                    Session.Add("Current User", List.ElementAt(i));
                     Response.Redirect("default.aspx");
+                }
+                else
+                {
+                    lblError.Visible = true;
+                    lblError.Text = "Das Passwort ist nicht korrekt.";
+                }
             }
             else
             {
                 lblError.Visible = true;
-                lblError.Text = "Das Passwort ist Falsch";
-            } }
-            else
-            {
-                lblError.Visible = true;
-                lblError.Text = "Das User ist Falsch";
+                lblError.Text = "Dieser User existiert nicht.";
             }
-            
-            
-           
+
+
+
 
 
         }

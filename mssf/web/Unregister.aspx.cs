@@ -38,7 +38,7 @@ namespace web
             {
                 if (inPassword.Text == List.ElementAt(i).Password)
                 {
-                    List.ElementAt(i).Delete();
+                    List.ElementAt(i).IsActive = false;
                     Response.Redirect("Default.apsx");
                 }
                 else

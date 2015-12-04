@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bll
 {
-    class clsProductFacade
+    public class clsProductFacade
     {
         clsProductCollection _productCol;
 
@@ -19,5 +19,7 @@ namespace bll
         {
             return _productCol.getAllProducts();
         }
+
+
     }
 }

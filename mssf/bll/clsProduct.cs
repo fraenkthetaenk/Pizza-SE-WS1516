@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bll
 {
-    class clsProduct
+    public class clsProduct
     {
         private int _id;
         public int Id

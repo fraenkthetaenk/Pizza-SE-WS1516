@@ -7,7 +7,7 @@ using System.Data;
 
 namespace bll
 {
-    class clsProductCollection : clsBLLCollections
+    public class clsProductCollection : clsBLLCollections
     {
         string _databaseFile;
         DAL.DALObjects.dDataProvider _myDAL;

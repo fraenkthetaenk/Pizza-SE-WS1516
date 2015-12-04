@@ -13,6 +13,12 @@
     <div>
 
         <h1>Willkommen bei MSSF's Pizza!</h1></div>
+        <p>
+            <asp:Label ID="lblManger" runat="server" Text="Sie sind auf der Startseite für den Manger" Visible="false" BackColor="Red" ForeColor="White"></asp:Label>
+            <asp:Label ID="lblKunde" runat="server" Text="Sie sind auf der Startseite für den Kunden" Visible="false" ></asp:Label>
+            <asp:Label ID="lblMitarbeiter" runat="server" Text="Sie sind auf der Mitarbeiter Startseite" Visible="false"></asp:Label>
+            <asp:Label ID="lblNotLogedIn" runat="server" Text="Sie sinf auf der Allgeminen Startseite (nicht Angemeldet), bitte melden sie sich an" Visible="false"></asp:Label>
+        </p>
     <p>
         <a href="Beispiele/default.aspx">Hier</a> gehts weiter zu einigen Beispielprogrammen ...
     </p> 
@@ -20,11 +26,26 @@
         <a href="product-read.aspx">Products</a>
         
         <p>
-            <a href="Login.aspx"> Login</a>
-            
+            <asp:HyperLink ID="linkLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
             </p>
+        <p>
+            <asp:HyperLink ID="linkUnregister" runat="server" NavigateUrl="~/Unregister.aspx">Unregister</asp:HyperLink>
+        </p>
+        <p>
+            <asp:HyperLink ID="linkRegister" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+        </p>
+        <p>
+           <asp:HyperLink ID="linkOrder" runat="server" NavigateUrl="~/Order.aspx">Order</asp:HyperLink>
+        </p>
+        <p>
+            <asp:HyperLink ID="linkMyOrders" runat="server" NavigateUrl="~/MyOrders.aspx">Meine Bestellungen</asp:HyperLink>
+        </p>
+        
         <asp:Label ID="lblCurrentuser" runat="server" Text=""></asp:Label>
-        <p><i>Version: 22.11.2015</i></p>
+        <p>
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+            </p>
+        <p><i>Version: 26.11.2015</i></p>
     </form>
 </body>
 </html>

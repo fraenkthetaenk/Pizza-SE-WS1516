@@ -50,8 +50,46 @@ namespace bll
         /// <returns>berechneter Preis</returns>
         public double CalculateOrderPrice(clsOrder _newOrder)
         {
-            // hier müsste die Preisberechnungsroutine hin
-            return 100.0;
+            bll.clsProductFacade products;
+            products = new bll.clsProductFacade();
+            List<bll.clsProduct> List;
+            List = products.ProductsGetAll();
+            int i = 0;
+            bool found = false;
+
+            while (found == false && i < List.Count)
+            {
+                if (List.ElementAt(i).Id == _newOrder.ProductId)
+                {
+                    found = true;
+                }
+                else
+                {
+                    i = i + 1;
+                }
+            }
+            double price = 0;
+            price = price + ((Convert.ToDouble(_newOrder.OrderSize) * List.ElementAt(i).PricePerUnit) * _newOrder.OrderCount);
+            price = price + ((_newOrder.OrderExtras * List.ElementAt(i).PricePerExtra) * _newOrder.OrderCount);
+           // hier müsste die Preisberechnungsroutine hin
+            return price;
         } // CalculateOrderPrice()
-    } // clsOrderFacade
+
+        public List<clsOrderExtended> OrdersGetByID(String userID)
+        {
+            List<clsOrderExtended> listAll = new List<clsOrderExtended>();
+            listAll = _orderCol.getAllOrders();
+            List<clsOrderExtended> listID = new List<clsOrderExtended>();
+            for (int i = 0; i < listAll.Count; i = i + 1)
+            {
+                if (listAll.ElementAt(i).UserId == Convert.ToInt32(userID))
+                {
+                    listID.Add(listAll.ElementAt(i));
+                }
+            }
+            return listID;
+        }
+            
+
+        } // clsOrderFacade
 }
