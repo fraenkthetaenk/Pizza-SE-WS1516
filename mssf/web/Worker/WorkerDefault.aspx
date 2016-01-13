@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WorkerDefaukt.aspx.cs" Inherits="web.Worker.WorkerDefaukt" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WorkerDefault.aspx.cs" Inherits="web.Worker.WorkerDefaukt" %>
 
 <!DOCTYPE html>
 

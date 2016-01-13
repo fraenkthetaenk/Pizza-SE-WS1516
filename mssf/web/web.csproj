@@ -71,8 +71,15 @@
     <Content Include="Beispiele\user-select.aspx" />
     <Content Include="Beispiele\user-zaehlen.aspx" />
     <Content Include="Beispiele\user-read.aspx" />
+    <Content Include="Costumer\CostumerDefault.aspx" />
+    <Content Include="Costumer\CostumerOrder.aspx" />
+    <Content Include="Costumer\CostumerOrderOverview.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Manager\ManagerDefault.aspx" />
+    <Content Include="Manager\ManagerManageProducts.aspx" />
+    <Content Include="Manager\ManagerManageUser.aspx" />
+    <Content Include="Manager\ManagerOrderOverview.aspx" />
     <Content Include="MyOrders.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="product-read.aspx" />
@@ -80,6 +87,8 @@
     <Content Include="StyleSheet.css" />
     <Content Include="Unregister.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Worker\WorkerDefault.aspx" />
+    <Content Include="Worker\WorkerOrders.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beispiele\beispiel.Master.cs">
@@ -180,6 +189,27 @@
     <Compile Include="Beispiele\user-read.aspx.designer.cs">
       <DependentUpon>user-read.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Costumer\CostumerDefault.aspx.cs">
+      <DependentUpon>CostumerDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumer\CostumerDefault.aspx.designer.cs">
+      <DependentUpon>CostumerDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costumer\CostumerOrder.aspx.cs">
+      <DependentUpon>CostumerOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumer\CostumerOrder.aspx.designer.cs">
+      <DependentUpon>CostumerOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costumer\CostumerOrderOverview.aspx.cs">
+      <DependentUpon>CostumerOrderOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumer\CostumerOrderOverview.aspx.designer.cs">
+      <DependentUpon>CostumerOrderOverview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,6 +223,34 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerDefault.aspx.cs">
+      <DependentUpon>ManagerDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerDefault.aspx.designer.cs">
+      <DependentUpon>ManagerDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerManageProducts.aspx.cs">
+      <DependentUpon>ManagerManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerManageProducts.aspx.designer.cs">
+      <DependentUpon>ManagerManageProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerManageUser.aspx.cs">
+      <DependentUpon>ManagerManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerManageUser.aspx.designer.cs">
+      <DependentUpon>ManagerManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerOrderOverview.aspx.cs">
+      <DependentUpon>ManagerOrderOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerOrderOverview.aspx.designer.cs">
+      <DependentUpon>ManagerOrderOverview.aspx</DependentUpon>
     </Compile>
     <Compile Include="MyOrders.aspx.cs">
       <DependentUpon>MyOrders.aspx</DependentUpon>
@@ -229,6 +287,20 @@
     </Compile>
     <Compile Include="Unregister.aspx.designer.cs">
       <DependentUpon>Unregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Worker\WorkerDefault.aspx.cs">
+      <DependentUpon>WorkerDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Worker\WorkerDefault.aspx.designer.cs">
+      <DependentUpon>WorkerDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Worker\WorkerOrders.aspx.cs">
+      <DependentUpon>WorkerOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Worker\WorkerOrders.aspx.designer.cs">
+      <DependentUpon>WorkerOrders.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
