@@ -11,7 +11,7 @@ namespace web.Worker
 {
 
 
-    public partial class WorkerDefaukt
+    public partial class WorkerDefault
     {
 
         /// <summary>

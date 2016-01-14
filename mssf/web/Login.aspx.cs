@@ -43,6 +43,22 @@ namespace web
                     Session.RemoveAll();
 
                     Session.Add("Current User", List.ElementAt(i));
+                    if(List.ElementAt(i).Role == 0)
+                    {
+                        Response.Redirect("Costumer/CostumerDefault.aspx");
+                    }
+                    else
+                    {
+                        if (List.ElementAt(i).Role == 1)
+                        {
+                            Response.Redirect("Manager/ManagerDefault.aspx");
+                        }
+                        else
+                        {
+                            Response.Redirect("Worker/WorkerDefault.aspx");
+                        }
+                    }
+
                     Response.Redirect("default.aspx");
                 }
                 else
