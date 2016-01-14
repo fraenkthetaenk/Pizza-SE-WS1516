@@ -75,6 +75,7 @@
     <Content Include="Costumer\CostumerOrder.aspx" />
     <Content Include="Costumer\CostumerOrderOverview.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Manager\ManagerDefault.aspx" />
     <Content Include="Manager\ManagerManageProducts.aspx" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -1,10 +1,10 @@
-﻿llllll<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostumerDefault.aspx.cs" Inherits="web.Costumer.CostumerDefault" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="web.Error" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Startseite-Kunde</title>
+    <title>Error</title>
 </head>
 <body>
     <form id="form1" runat="server">
