@@ -27,13 +27,13 @@ namespace web
                 switch (currentUser.Role)
                 {
                     case 0:
-                        lblKunde.Visible = true;
+                        //lblKunde.Visible = true;
                         linkRegister.Visible = false;
                         linkLogin.Visible = false;
                         break;
 
                     case 1:
-                        lblManger.Visible = true;
+                        //lblManger.Visible = true;
                         linkUnregister.Visible = false;
                         linkOrder.Visible = false;
                         linkRegister.Visible = false;
@@ -41,7 +41,7 @@ namespace web
                         linkMyOrders.Text = "Bestellungen";
                         break;
                     case 2:
-                        lblMitarbeiter.Visible = true;
+                        //lblMitarbeiter.Visible = true;
                         linkUnregister.Visible = false;
                         linkOrder.Visible = false;
                         linkRegister.Visible = false;

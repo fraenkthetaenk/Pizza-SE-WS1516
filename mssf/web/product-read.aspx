@@ -14,7 +14,7 @@
     <div>
     
     </div>
-        <asp:GridView ID="grdProducts" runat="server" DataSourceID="odsProducts" AutoGenerateColumns="False">
+        <asp:GridView ID="grdProducts" runat="server" DataSourceID="odsProducts" AutoGenerateColumns="False" OnSelectedIndexChanged="grdProducts_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />

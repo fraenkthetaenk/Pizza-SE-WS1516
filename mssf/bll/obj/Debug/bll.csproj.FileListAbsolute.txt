@@ -63,3 +63,10 @@ C:\Users\SteineFr\Desktop\Uni\3.Semster\Pizza-SE-WS1516\bll\bin\Debug\bll.pdb
 C:\Users\SteineFr\Desktop\Uni\3.Semster\Pizza-SE-WS1516\bll\bin\Debug\DAL.dll
 C:\Users\SteineFr\Desktop\Uni\3.Semster\Pizza-SE-WS1516\bll\obj\Debug\bll.dll
 C:\Users\SteineFr\Desktop\Uni\3.Semster\Pizza-SE-WS1516\bll\obj\Debug\bll.pdb
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.XML
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.dll
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\bll.pdb
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\bin\Debug\DAL.dll
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.csprojResolveAssemblyReference.cache
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.dll
+C:\Users\SteineFr\Desktop\Uni\3.Semster\GIT SE\Pizza-SE-WS1516\mssf\bll\obj\Debug\bll.pdb

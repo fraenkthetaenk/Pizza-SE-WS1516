@@ -8,9 +8,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+        <div>
+            Sie sind als der Kunde
+            <asp:Label ID="lblLogedin" runat="server" Text=""></asp:Label>
+            Eingeloggt.
+            <p>
+                <a href="CostumerProducts.aspx">Produktübersicht</a>
+            </p>
+             <p>
+                <a href ="CostumerOrder.aspx">Bestellung</a>
+            </p>
+            <p>
+                <a href="CostumerOrderOverview.aspx">Bestellübersicht</a>
+            </p>
+           
+            <p>
+                <a href="CostumerUmsatz.aspx">Umsatzübersicht</a>
+            </p>
+            <p>
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+            </p>
+        </div>
     </form>
 </body>
 </html>

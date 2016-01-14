@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace web.Manager
 {
-    public partial class ManagerManageUser : System.Web.UI.Page
+    public partial class CostumerCoupons : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +23,7 @@ namespace web.Manager
                     Response.Redirect("../Error.aspx");
                 }
             }
+
         }
     }
 }

@@ -91,5 +91,20 @@ namespace bll
         }
             
 
+        public List<clsOrderExtended> OrdersGetAllActive()
+        {
+            List<clsOrderExtended> listAll = new List<clsOrderExtended>();
+            listAll = OrdersGetAll();
+            List<clsOrderExtended> listActive = new List<clsOrderExtended>();
+            for(int i =0; i<listAll.Count; i = i + 1)
+            {
+                if (listAll.ElementAt(1).OrderStatus != 4)
+                {
+                    listActive.Add(listAll.ElementAt(i));
+                }
+            }
+            return listActive;
+        }
+
         } // clsOrderFacade
 }

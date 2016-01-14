@@ -13,14 +13,14 @@ namespace web.Costumer
         {
             if (Session.Count == 0)
             {
-                Response.Redirect("Error.aspx");
+                Response.Redirect("../Error.aspx");
             }
             else
             {
                 bll.clsUser user = (bll.clsUser)Session["Current User"];
                 if (user.Role != 0)
                 {
-                    Response.Redirect("Error.aspx");
+                    Response.Redirect("../Error.aspx");
                 }
             }
 

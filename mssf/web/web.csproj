@@ -74,9 +74,12 @@
     <Content Include="Costumer\CostumerDefault.aspx" />
     <Content Include="Costumer\CostumerOrder.aspx" />
     <Content Include="Costumer\CostumerOrderOverview.aspx" />
+    <Content Include="Costumer\CostumerProducts.aspx" />
+    <Content Include="Costumer\CostumerUmsatz.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Manager\ManagerCoupons.aspx" />
     <Content Include="Manager\ManagerDefault.aspx" />
     <Content Include="Manager\ManagerManageProducts.aspx" />
     <Content Include="Manager\ManagerManageUser.aspx" />
@@ -84,6 +87,7 @@
     <Content Include="MyOrders.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="product-read.aspx" />
+    <Content Include="Redirect.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Unregister.aspx" />
@@ -211,6 +215,20 @@
     <Compile Include="Costumer\CostumerOrderOverview.aspx.designer.cs">
       <DependentUpon>CostumerOrderOverview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Costumer\CostumerProducts.aspx.cs">
+      <DependentUpon>CostumerProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumer\CostumerProducts.aspx.designer.cs">
+      <DependentUpon>CostumerProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costumer\CostumerUmsatz.aspx.cs">
+      <DependentUpon>CostumerUmsatz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumer\CostumerUmsatz.aspx.designer.cs">
+      <DependentUpon>CostumerUmsatz.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +249,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerCoupons.aspx.cs">
+      <DependentUpon>ManagerCoupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerCoupons.aspx.designer.cs">
+      <DependentUpon>ManagerCoupons.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\ManagerDefault.aspx.cs">
       <DependentUpon>ManagerDefault.aspx</DependentUpon>
@@ -282,6 +307,13 @@
       <DependentUpon>product-read.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

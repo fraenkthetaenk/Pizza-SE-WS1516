@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManagerManageProducts.aspx.cs" Inherits="web.Manager.ManagerManageProducts" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManagerCoupons.aspx.cs" Inherits="web.Manager.CostumerCoupons" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Produktverwaltung</title>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
