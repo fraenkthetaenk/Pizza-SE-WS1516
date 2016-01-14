@@ -9,36 +9,50 @@
 <body>
     <form id="form1" runat="server">
         <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
-    <div>
-        <h1>Bestellen</h1>
-        <p></p>
-         <asp:GridView ID="grdProducts" runat="server" DataSourceID="odsProducts" AutoGenerateColumns="False">
-            <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
-                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="PricePerUnit" HeaderText="PricePerUnit" SortExpression="PricePerUnit" />
-                <asp:BoundField DataField="Category" HeaderText="Category" SortExpression ="Category" />
-                <asp:BoundField DataField="CategoryName" HeaderText="CategoryName" SortExpression="CategoryName" />
-                <asp:BoundField DataField="Unit" HeaderText="Unit" SortExpression="Unit" />
-                <asp:BoundField DataField="PricePerExtra" HeaderText="PricePerExtra" SortExpression="PricePerExtra" />
-            </Columns>
-        </asp:GridView>
-        <asp:ObjectDataSource ID="odsProducts" runat="server" SelectMethod="ProductsGetAll" TypeName="bll.clsProductFacade" OldValuesParameterFormatString="original_{0}"></asp:ObjectDataSource>
-         
-    <!--
+        <div>
+            <h1>Bestellen</h1>
+            <p></p>
+            <asp:GridView ID="grdProducts" runat="server" DataSourceID="odsProducts" AutoGenerateColumns="False" OnSelectedIndexChanged="grdProducts_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                    <asp:BoundField DataField="PricePerUnit" HeaderText="PricePerUnit" SortExpression="PricePerUnit" />
+                    <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
+                    <asp:BoundField DataField="CategoryName" HeaderText="CategoryName" SortExpression="CategoryName" />
+                    <asp:BoundField DataField="Unit" HeaderText="Unit" SortExpression="Unit" />
+                    <asp:BoundField DataField="PricePerExtra" HeaderText="PricePerExtra" SortExpression="PricePerExtra" />
+                    <asp:ButtonField CommandName="Select" HeaderText="Link-Select" ShowHeader="True" Text="Button" />
+
+
+                    <asp:TemplateField HeaderText="Size">
+                        <ItemTemplate>
+                            <asp:DropDownList runat="server" ID="List">
+                                <asp:ListItem Value="0">Klein</asp:ListItem>
+                                <asp:ListItem Value="1">Mittel</asp:ListItem>
+                                <asp:ListItem Value="2">Groß</asp:ListItem>
+                            </asp:DropDownList>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
+            <asp:ObjectDataSource ID="odsProducts" runat="server" SelectMethod="ProductsGetAll" TypeName="bll.clsProductFacade" OldValuesParameterFormatString="original_{0}"></asp:ObjectDataSource>
+
+            <!--
          <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="odsProducts" DataTextField="Name" DataValueField="Id" Visible="false">
          </asp:CheckBoxList>-->
-         
-    
-    </div>
+
+
+        </div>
         <asp:DropDownList ID="inOrderlist" runat="server" DataSourceID="odsProducts" DataTextField="Name" DataValueField="Id" Visible="true">
         </asp:DropDownList>
 
-          <p>
+        <p>
             <asp:Label ID="lblCount" runat="server" Text="Count:" Width="100px"></asp:Label>
             <asp:TextBox ID="inCount" runat="server" TextMode="Number" Width="30px">0</asp:TextBox>
         </p>
-           <p>
+        <p>
             <asp:Label ID="lblSize" runat="server" Text="Size:" Width="100px"></asp:Label>
             <asp:TextBox ID="inSize" runat="server" TextMode="Number" Width="30px">0</asp:TextBox>
         </p>
@@ -46,23 +60,25 @@
             <asp:Label ID="lblExtras" runat="server" Text="Extras:" Width="100px"></asp:Label>
 
             <asp:TextBox ID="inExtras" runat="server" TextMode="Number" Width="30px">0</asp:TextBox>
-        </p><p>
-                 <%--   <asp:CheckBoxList ID="inListDelivery" runat="server" TextAlign="Left">
+        </p>
+        <p>
+            <%--   <asp:CheckBoxList ID="inListDelivery" runat="server" TextAlign="Left">
                 <asp:ListItem Value="true">Lieferung</asp:ListItem>
                 <asp:ListItem Value="false">Abholung</asp:ListItem>
             </asp:CheckBoxList>--%>
             <asp:RadioButtonList ID="inListDelivery" runat="server" TextAlign="Left">
                 <asp:ListItem Value="true">Lieferung</asp:ListItem>
                 <asp:ListItem Value="false">Abholung</asp:ListItem>
-             </asp:RadioButtonList>
+            </asp:RadioButtonList>
         </p>
         <asp:Button ID="btnOrder" runat="server" Text="Order" OnClick="btnOrder_Click" />
         <p>
-        <asp:Label ID="lblError" runat="server" Text="" Visible="false"></asp:Label>
-            </p><p>
+            <asp:Label ID="lblError" runat="server" Text="" Visible="false"></asp:Label>
+        </p>
+        <p>
             <asp:HyperLink ID="linkLogin" runat="server" Visible="false" NavigateUrl="~/Login.aspx">Zum Login</asp:HyperLink>
-                <asp:HyperLink ID="linkDefault" runat="server" NavigateUrl="~/default.aspx">Main Page</asp:HyperLink>
-            </p>
+            <asp:HyperLink ID="linkDefault" runat="server" NavigateUrl="~/default.aspx">Main Page</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>

@@ -67,5 +67,13 @@ namespace bll
             get { return _pricePerExtra; }
             set { _pricePerExtra = value; }
         }
+
+        private bool _isActive;
+
+        public bool IsActive
+        {
+            get { return _isActive; }
+            set { _isActive = value; }
+        }
     }
 }

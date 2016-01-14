@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace web
-{
-
-
-    public partial class Redirect
-    {
-
+namespace web {
+    
+    
+    public partial class Redirect1 {
+        
         /// <summary>
         /// form1 control.
         /// </summary>

@@ -1,4 +1,4 @@
-﻿llllll<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostumerDefault.aspx.cs" Inherits="web.Costumer.CostumerDefault" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostumerDefault.aspx.cs" Inherits="web.Costumer.CostumerDefault" %>
 
 <!DOCTYPE html>
 

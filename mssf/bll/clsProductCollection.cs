@@ -44,6 +44,7 @@ namespace bll
             _myProduct.Unit = AddStringFieldValue(_dr, "CUnit");
             _myProduct.PricePerUnit = AddDoubleFieldValue(_dr, "PPricePerUnit");
             _myProduct.PricePerExtra = AddDoubleFieldValue(_dr, "PPricePerExtra");
+            _myProduct.IsActive = AddBoolFieldValue(_dr, "PSell");
             
             return _myProduct;
         }
