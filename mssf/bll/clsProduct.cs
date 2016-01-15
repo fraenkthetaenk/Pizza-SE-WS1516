@@ -75,5 +75,11 @@ namespace bll
             get { return _isActive; }
             set { _isActive = value; }
         }
+
+        public bool Update()
+        {
+            clsProductCollection _prdCol = new clsProductCollection();
+            return (_prdCol.UpdateProduct(this) == 1);
+        } // Update()
     }
 }

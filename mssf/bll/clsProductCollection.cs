@@ -48,5 +48,23 @@ namespace bll
             
             return _myProduct;
         }
+
+        public int UpdateProduct(clsProduct _Product)
+        {
+
+            // Übergabeparameter hinzufügen 
+            // (Parameter in derselben Reihenfolge wie in der Access-Query)
+            _myDAL.AddParam("Name", _Product.Name, DAL.DataDefinition.enumerators.SQLDataType.VARCHAR);
+            _myDAL.AddParam("Category", _Product.Category, DAL.DataDefinition.enumerators.SQLDataType.INT);
+            _myDAL.AddParam("PPU", _Product.PricePerUnit, DAL.DataDefinition.enumerators.SQLDataType.DOUBLE);
+            _myDAL.AddParam("Active", _Product.IsActive, DAL.DataDefinition.enumerators.SQLDataType.BOOL);
+            _myDAL.AddParam("PPE", _Product.PricePerExtra, DAL.DataDefinition.enumerators.SQLDataType.DOUBLE);
+            _myDAL.AddParam("ID", _Product.Id, DAL.DataDefinition.enumerators.SQLDataType.INT);
+
+            //Ausführen und veränderte Zeilen zurückgeben
+            int _changedSets = _myDAL.MakeStoredProcedureAction("QUUpdateProductByID");
+
+            return _changedSets;
+        } //updateUser()
     }
 }
