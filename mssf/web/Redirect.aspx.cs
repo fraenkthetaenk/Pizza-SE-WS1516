@@ -7,10 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace web
 {
-	public partial class Redirect1 : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class Redirect11 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
             if(Session.Count == 0)
             {
                 Response.Redirect("default.aspx");
@@ -27,11 +27,10 @@ namespace web
                         Response.Redirect("Manager/ManagerDefault.aspx");
                         break;
                     case 2:
-                        Response.Redirect("Worker/WorkerDeafult.aspx");
+                        Response.Redirect("Worker/WorkerDefault.aspx");
                         break;
                 }
             }
-              
-		}
-	}
+        }
+    }
 }

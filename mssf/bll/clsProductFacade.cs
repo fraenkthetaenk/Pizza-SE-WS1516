@@ -46,6 +46,11 @@ namespace bll
 
         }
 
+        public bool ProductUpdate (clsProduct upProduct)
+        {
+            return upProduct.Update();
+        }
+
 
     }
 }

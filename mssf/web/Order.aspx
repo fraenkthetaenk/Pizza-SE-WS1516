@@ -35,6 +35,9 @@
                     </asp:TemplateField>
 
 
+                    <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+
+
                 </Columns>
             </asp:GridView>
             <asp:ObjectDataSource ID="odsProducts" runat="server" SelectMethod="ProductsGetAll" TypeName="bll.clsProductFacade" OldValuesParameterFormatString="original_{0}"></asp:ObjectDataSource>
