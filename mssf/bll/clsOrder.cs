@@ -53,6 +53,16 @@ namespace bll
             set { _orderDate = value; }
         }
 
+        private DateTime _orderDeliveryDate;
+        /// <summary>
+        /// Zeitpunkt wann geliefert wurde
+        /// </summary>
+        public DateTime OrderDeliveryDate
+        {
+            get { return _orderDeliveryDate; }
+            set { _orderDeliveryDate = value; }
+        }
+
         private int _orderSize;     
         /// <summary>
         /// Größe des bestellten Produkts,  in cm, litern, etc.
@@ -129,7 +139,14 @@ namespace bll
             this._orderSum = 0.0;
             this._orderDelivery = false;
             this._orderStatus = 0;
+            this._orderDeliveryDate = DateTime.MinValue; // default
         }
+        public bool Update()
+        {
+            clsOrderCollection _ordCol = new clsOrderCollection();
+            return (_ordCol.UpdateOrder(this) == 1);
+        }
+
 
     } // clsOrder
 
@@ -161,6 +178,7 @@ namespace bll
             set { _userName = value; }
         }
 
+     
         /// <summary>
         /// Constructor (mit Default-Werten)
         /// ruft zunächst Constructor der Oberklasse (clsOrder) auf und setzt dann die zusätzlichen Attribute
@@ -170,6 +188,7 @@ namespace bll
             this._productName = "";
             this._userName = "";
         }
+
         
     } // clsOrderExtended
 }

@@ -24,5 +24,19 @@ namespace web.Worker
                 }
             }
         }
+
+        protected void grdActiveOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = grdActiveOrders.SelectedRow;
+            bll.clsOrder toUpdate = new bll.clsOrder();
+            toUpdate.OrderStatus = Convert.ToInt32(row.Cells[12].Text) +1;
+            toUpdate.ID = Convert.ToInt32(row.Cells[2].Text);
+            if (toUpdate.OrderStatus == 3) {
+                toUpdate.OrderDeliveryDate =DateTime.UtcNow;
+            }
+            toUpdate.Update();
+            Response.Redirect("WorkerOrders.aspx");
+           
+        }
     }
 }

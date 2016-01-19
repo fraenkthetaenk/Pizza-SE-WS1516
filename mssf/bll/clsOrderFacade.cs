@@ -98,12 +98,17 @@ namespace bll
             List<clsOrderExtended> listActive = new List<clsOrderExtended>();
             for(int i =0; i<listAll.Count; i = i + 1)
             {
-                if (listAll.ElementAt(1).OrderStatus != 4)
+                if (listAll.ElementAt(i).OrderStatus < 3)
                 {
                     listActive.Add(listAll.ElementAt(i));
                 }
             }
             return listActive;
+        }
+
+        public bool OrderUpdate( clsOrder updateOrder)
+        {
+            return updateOrder.Update();
         }
 
         } // clsOrderFacade

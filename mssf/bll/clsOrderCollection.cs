@@ -18,8 +18,8 @@ namespace bll
         /// <summary>
         /// Order-Collection Konstruktor 
         /// </summary>
-        public clsOrderCollection() 
-        {   
+        public clsOrderCollection()
+        {
             // hier wird der Pfad zur Access-Datei aus web.config gelesen
             _databaseFile = System.Configuration.ConfigurationManager.AppSettings["AccessFileName"];
             // DAL-Objekt instantiieren, wird von den Methoden unten genutzt
@@ -49,7 +49,7 @@ namespace bll
             }
             return _myOrderList;
         } //getAllOrders() 
- 
+
         /// <summary>
         /// Insert eines Orderobjekts
         /// </summary>
@@ -102,6 +102,17 @@ namespace bll
             return _myOrder;
         } //DatarowToclsOrder()
 
+        public int UpdateOrder(clsOrder _Order)
+        {
+            _myProvider.AddParam("Status", _Order.OrderStatus, DAL.DataDefinition.enumerators.SQLDataType.INT);
+            _myProvider.AddParam("DeliveryDate", _Order.OrderDeliveryDate, DAL.DataDefinition.enumerators.SQLDataType.DATETIME);
+            _myProvider.AddParam("ID", _Order.ID, DAL.DataDefinition.enumerators.SQLDataType.INT);
 
+            //Ausführen und veränderte Zeilen zurückgeben
+            int _changedSets = _myProvider.MakeStoredProcedureAction("QUUpdateTOrderByID");
+
+            return _changedSets;
+
+        }
     } //clsOrderCollection
 }

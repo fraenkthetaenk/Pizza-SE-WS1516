@@ -75,6 +75,11 @@
             Zeitpunkt wann bestellt wurde
             </summary>
         </member>
+        <member name="P:bll.clsOrder.OrderDeliveryDate">
+            <summary>
+            Zeitpunkt wann geliefert wurde
+            </summary>
+        </member>
         <member name="P:bll.clsOrder.OrderSize">
             <summary>
             Größe des bestellten Produkts,  in cm, litern, etc.

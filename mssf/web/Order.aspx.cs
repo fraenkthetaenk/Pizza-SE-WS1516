@@ -93,7 +93,7 @@ namespace web
             DropDownList list2 = row.FindControl("List") as DropDownList;
             lblError.Visible = true;
             lblError.Text = list2.SelectedValue;
-            //row.Cells[1].Text 
+            lblError.Text = row.Cells[1].Text;
 
 
         }
