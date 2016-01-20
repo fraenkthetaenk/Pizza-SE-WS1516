@@ -25,5 +25,10 @@ namespace web.Costumer
             }
 
         }
+
+        protected void ObjectDataSource2_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }
