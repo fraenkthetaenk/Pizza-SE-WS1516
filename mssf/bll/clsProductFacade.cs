@@ -23,7 +23,8 @@ namespace bll
         {
             List<clsProduct> allProducts = ProductsGetAll();
             List<clsProduct> ActiveProducts = new List<clsProduct>();
-            for(int i =0; i<allProducts.Count; i = i +1) {
+            for (int i = 0; i < allProducts.Count; i = i + 1)
+            {
                 if (allProducts.ElementAt(i).IsActive)
                 {
                     ActiveProducts.Add(allProducts.ElementAt(i));
@@ -46,11 +47,20 @@ namespace bll
 
         }
 
-        public bool ProductUpdate (clsProduct upProduct)
+        public bool ProductUpdate(clsProduct upProduct)
         {
             return upProduct.Update();
         }
 
 
+        public bool ProductInsert(clsProduct newProduct)
+        {
+
+
+            if (_productCol.InsertProduct(newProduct) == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }

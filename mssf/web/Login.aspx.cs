@@ -44,10 +44,11 @@ namespace web
             {
                 if (inPassword.Text == List.ElementAt(i).Password)
                 {
-                    Session.RemoveAll();
+                    if (List.ElementAt(i).IsActive) { 
+                        Session.RemoveAll();
 
-                    Session.Add("Current User", List.ElementAt(i));
-                    Response.Redirect("Redirect.aspx");
+                        Session.Add("Current User", List.ElementAt(i));
+                        Response.Redirect("Redirect.aspx"); }
                     //if(List.ElementAt(i).Role == 0)
                     //{
                     //    Response.Redirect("Costumer/CostumerDefault.aspx");
@@ -65,7 +66,12 @@ namespace web
                     //}
 
                     //Response.Redirect("default.aspx");
-                }
+
+                    else
+                    {
+                        lblError.Visible = true;
+                        lblError.Text = "Sie sind als Inaktiv Makiert und dürfen sich desswegen nicht Anmelden, bitte kontaktiren sie uns wenn wir sie wieder aktiviren sollen.";
+                    } }
                 else
                 {
                     lblError.Visible = true;

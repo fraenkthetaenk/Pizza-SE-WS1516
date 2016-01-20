@@ -81,5 +81,11 @@ namespace bll
             clsProductCollection _prdCol = new clsProductCollection();
             return (_prdCol.UpdateProduct(this) == 1);
         } // Update()
+
+        public bool Insert()
+        {
+            clsProductCollection _prdCol = new clsProductCollection();
+            return (_prdCol.InsertProduct(this) == 1);
+        } // Insert()
     }
 }

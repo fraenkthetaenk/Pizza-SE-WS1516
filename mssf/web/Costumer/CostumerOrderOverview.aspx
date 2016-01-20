@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1">
+        <asp:GridView ID="grdCostumerOrderOverview" runat="server" AutoGenerateColumns="False" DataSourceID="obsCostumerOrders">
             <Columns>
                 <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
                 <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
@@ -26,14 +26,17 @@
                 <asp:CheckBoxField DataField="OrderDelivery" HeaderText="OrderDelivery" SortExpression="OrderDelivery" />
                 <asp:BoundField DataField="OrderStatus" HeaderText="OrderStatus" SortExpression="OrderStatus" />
             </Columns>
-        </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="OrdersGetByID" TypeName="bll.clsOrderFacade">
+        </asp:GridView> 
+        <asp:Label ID="lblUserID" runat="server" Text="" Visible="false"></asp:Label>
+        <asp:ObjectDataSource ID="obsCostumerOrders" runat="server" SelectMethod="OrdersGetByID" TypeName="bll.clsOrderFacade">
             <SelectParameters>
-                <asp:Parameter DefaultValue="null" Name="userID" Type="String" />
+                <asp:ControlParameter ControlID="lblUserID" DefaultValue="" Name="userID" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
     
     </div>
+       
+        
     </form>
 </body>
 </html>

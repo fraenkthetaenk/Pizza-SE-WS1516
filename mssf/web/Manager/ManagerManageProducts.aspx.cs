@@ -25,5 +25,25 @@ namespace web.Manager
             //    }
             //}
         }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            bll.clsProduct toInsert= new bll.clsProduct();
+            try {
+                toInsert.Category = Convert.ToInt32(ListCategoty.SelectedValue);
+                toInsert.IsActive = checkActive.Enabled;
+                toInsert.Name = inName.Text;
+                toInsert.PricePerExtra = Convert.ToDouble(inPPE.Text);
+                toInsert.PricePerUnit = Convert.ToDouble(inPPU.Text);
+                toInsert.Insert();
+            }
+            catch
+            {
+                lblError.Visible = true;
+                lblError.Text = "Es gab einen Fehler bitte Versuchen sie es Erneut";
+                
+            }
+           
+        }
     }
 }

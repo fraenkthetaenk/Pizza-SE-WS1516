@@ -24,5 +24,24 @@ namespace web.Manager
             //    }
             //}
         }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            bll.clsUser toInsert = new bll.clsUser();
+            try {
+                toInsert.Address = inAdress.Text;
+                toInsert.Distance = Convert.ToInt32(inDistance.Text);
+                toInsert.IsActive = checkActive.Enabled;
+                toInsert.Name = inName.Text;
+                toInsert.Password = inPassword.Text;
+                toInsert.Role = Convert.ToInt32(ListRole.SelectedValue);
+                toInsert.Insert(); }
+            catch
+            {
+                lblError.Visible = true;
+                lblError.Text = "Etwas ist schiefgelaufen bitte versuchen sie es erneut";
+            }
+            Response.Redirect("ManagerManageUser.aspx");
+        }
     }
 }

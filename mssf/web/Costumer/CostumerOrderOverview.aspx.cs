@@ -20,8 +20,10 @@ namespace web.Costumer
                 bll.clsUser user = (bll.clsUser)Session["Current User"];
                 if (user.Role != 0)
                 {
-                    Response.Redirect("../Error.aspx");
+                   Response.Redirect("../Error.aspx");
+                    
                 }
+                lblUserID.Text = Convert.ToString(user.ID);
             }
 
         }
