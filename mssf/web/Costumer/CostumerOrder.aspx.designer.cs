@@ -40,12 +40,30 @@ namespace web.Costumer {
         protected global::System.Web.UI.WebControls.ObjectDataSource odsActiveProducts;
         
         /// <summary>
-        /// lblMessage control.
+        /// lblMessage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label lblMessage1;
+        
+        /// <summary>
+        /// lblMessage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage2;
+        
+        /// <summary>
+        /// lblMessage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage3;
     }
 }

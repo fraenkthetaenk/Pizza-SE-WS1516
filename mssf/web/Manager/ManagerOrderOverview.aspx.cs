@@ -22,7 +22,18 @@ namespace web.Manager
                 {
                     Response.Redirect("../Error.aspx");
                 }
-            }
+
+                bll.clsOrderFacade allOrders = new bll.clsOrderFacade();
+                List<bll.clsOrderExtended> OrdersList = allOrders.OrdersGetAll();
+                double sum = 0;
+                foreach(bll.clsOrderExtended element in OrdersList)
+                {
+                    sum = sum + element.OrderSum;
+                }
+                lblTotal.Text = sum.ToString();
+                lblAverage.Text = (sum / OrdersList.Count).ToString();
+
         }
+    }
     }
 }

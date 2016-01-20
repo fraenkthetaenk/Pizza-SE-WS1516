@@ -24,6 +24,15 @@ namespace web.Costumer
                     
                 }
                 lblUserID.Text = Convert.ToString(user.ID);
+                bll.clsOrderFacade allOrders = new bll.clsOrderFacade();
+                List<bll.clsOrderExtended> OrdersList = allOrders.OrdersGetByID(lblUserID.Text);
+                double sum = 0;
+                foreach (bll.clsOrderExtended element in OrdersList)
+                {
+                    sum = sum + element.OrderSum;
+                }
+                lblTotal.Text = sum.ToString();
+             
             }
 
         }

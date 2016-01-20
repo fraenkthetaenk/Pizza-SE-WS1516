@@ -31,49 +31,42 @@ namespace web.Costumer
             GridViewRow row = grdProducts.SelectedRow;
             DropDownList size = row.FindControl("lisSize") as DropDownList;
             DropDownList extras = row.FindControl("lisExtras") as DropDownList;
+            CheckBox delivery = row.FindControl("checkDelivery") as CheckBox;
             TextBox menge = row.FindControl("inMenge") as TextBox;
-            lblMessage.Text = size.SelectedValue + " | ";
-            lblMessage.Text = lblMessage.Text + extras.SelectedValue + " | ";
-               lblMessage.Text = lblMessage.Text + menge.Text;
+         
 
 
-            ////Ab hier noch nicht sicher
-            //bll.clsProductFacade products;
-            //products = new bll.clsProductFacade();
-            //int i = Convert.ToInt32(row.Cells[0].Text);
-            //bll.clsProduct product = products.ProductGetByID(i);
+          
+            bll.clsProductFacade products;
+            products = new bll.clsProductFacade();
+            int i = Convert.ToInt32(row.Cells[0].Text);
+            bll.clsProduct product = products.ProductGetByID(i);
 
 
 
-            //bll.clsUser user = (bll.clsUser)Session["Current User"];
-            //bll.clsOrder order;
-            //order = new bll.clsOrder();
-            //bll.clsOrderFacade orders = new bll.clsOrderFacade();
-            //order.OrderCount = 1;//Convert.ToInt32(inCount.Text);
-            //order.OrderDate = DateTime.UtcNow;
-            ////if (inListDelivery.SelectedValue == "true")
-            ////{
-            ////    order.OrderDelivery = true;
-            ////}
-            ////else
-            ////{
-            ////    order.OrderDelivery = false;
-            ////}
-            //order.OrderDelivery = true;
-            //order.OrderExtras = 0;// Convert.ToInt32(inExtras.Text);
-            //order.OrderSize = Convert.ToInt32(size.SelectedValue);//Convert.ToInt32(inSize.Text);
-            //order.OrderStatus = 0;
-            //order.ProductId = product.Id;
-            //order.UserId = user.ID;
-            //order.OrderSum = orders.CalculateOrderPrice(order);
+            bll.clsUser user = (bll.clsUser)Session["Current User"];
+            bll.clsOrder order;
+            order = new bll.clsOrder();
+            bll.clsOrderFacade orders = new bll.clsOrderFacade();
+            order.OrderCount = 1;//Convert.ToInt32(inCount.Text);
+            order.OrderDate = DateTime.UtcNow;
+                  order.OrderDelivery = delivery.Enabled;
+            order.OrderExtras = Convert.ToInt32(extras.SelectedValue);// Convert.ToInt32(inExtras.Text);
+            order.OrderSize = Convert.ToInt32(size.SelectedValue);//Convert.ToInt32(inSize.Text);
+            order.OrderStatus = 0;
+            order.ProductId = product.Id;
+            order.UserId = user.ID;
+            order.OrderSum = orders.CalculateOrderPrice(order);
 
 
 
 
-            //if (orders.OrderInsert(order))
-            //{
-            //    lblMessage.Text= "Die Bestellung wurde erfolgreich aufgenommen";
-            //}
+            if (orders.OrderInsert(order))
+            {
+                lblMessage1.Text = "Die Bestellung wurde erfolgreich aufgenommen.";
+                lblMessage2.Text = "Die Bestellung kostet: " + order.OrderSum.ToString();
+                lblMessage3.Text = "Die Lieferzeit beträgt: " + ((user.Distance * 2) + 10).ToString() + "Minuten.";
+            }
 
         }
     }

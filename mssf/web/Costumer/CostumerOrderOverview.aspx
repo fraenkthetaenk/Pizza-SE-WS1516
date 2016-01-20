@@ -33,6 +33,11 @@
                 <asp:ControlParameter ControlID="lblUserID" DefaultValue="" Name="userID" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
+
+           Der Gesamtumsatz Beträgt:
+            <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label><p />
+
+        <a href="CostumerDefault.aspx">Startseite</a>
     
     </div>
        

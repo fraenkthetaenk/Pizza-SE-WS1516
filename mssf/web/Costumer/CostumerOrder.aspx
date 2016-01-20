@@ -15,12 +15,12 @@
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                 <asp:BoundField DataField="CategoryName" HeaderText="CategoryName" SortExpression="CategoryName" />
-                <asp:TemplateField HeaderText="Size">
+                <asp:TemplateField HeaderText="Größe">
                     <ItemTemplate>
                         <asp:DropDownList runat="server" ID="lisSize">
-                            <asp:ListItem Value="0">Klein</asp:ListItem>
-                            <asp:ListItem Value="1">Mittel</asp:ListItem>
-                            <asp:ListItem Value="2">Groß</asp:ListItem>
+                            <asp:ListItem Value="26">Klein</asp:ListItem>
+                            <asp:ListItem Value="32">Mittel</asp:ListItem>
+                            <asp:ListItem Value="45">Groß</asp:ListItem>
                         </asp:DropDownList>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -43,15 +43,25 @@
                     </asp:TemplateField>
                 <asp:TemplateField HeaderText="Menge">
                         <ItemTemplate>
-                            <asp:TextBox ID="inMenge" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="inMenge" runat="server" Width="50px"></asp:TextBox>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                <asp:TemplateField HeaderText="Lieferung">
+                        <ItemTemplate>
+                            <asp:CheckBox ID="checkDelivery" runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Bestellen" ShowHeader="True" Text="Auswählen" />
             </Columns>
         </asp:GridView>
 
+
         <asp:ObjectDataSource ID="odsActiveProducts" runat="server" SelectMethod="ProductsGetAllActive" TypeName="bll.clsProductFacade"></asp:ObjectDataSource>
-        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblMessage1" runat="server" Text=""></asp:Label><p/>
+        <asp:Label ID="lblMessage2" runat="server" Text=""></asp:Label><p/>
+        <asp:Label ID="lblMessage3" runat="server" Text=""></asp:Label><p/>
+
+        <a href="CostumerDefault.aspx">Startseite</a>
     </form>
 </body>
 </html>
